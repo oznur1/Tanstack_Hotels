@@ -3,6 +3,7 @@ import Hero from "./hero"
 import List from "./list"
 import Filter from "./filter"
 
+
 const Home:FC = () => {
   return (
     <div className="container my-5 max-auto">
@@ -14,6 +15,8 @@ const Home:FC = () => {
       </div>
       
       <div className="lg:col-span-3 w-full"> 
+
+ 
      <List/>
     </div>
     </div>

@@ -1,7 +1,10 @@
 import type {FC}from"react"
 import { Link } from "react-router-dom"
+import { usePlaces } from "../../utils/service"
 
 const Header:FC = () => {
+const {data}=usePlaces()
+
   return (
     <header className="border-b border-zinc-300">
      <div className="flex justify-between container">
@@ -9,7 +12,7 @@ const Header:FC = () => {
         <h1 className="font-bold text-xl md:text-2xl">Tripster</h1>
 
         <nav className="flex gap-5 items-center">
-        <Link to="/">Oteller {19}</Link>
+        <Link to="/">Oteller ({data?.length})</Link>
          <Link to="/" className="max-md:hidden">Popüler</Link>
           <Link to="/from/create">Oluştur</Link>
         </nav>
